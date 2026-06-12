@@ -1,0 +1,12 @@
+# Bundler
+/.bundle/
+/vendor/bundle/
+
+# Logs
+*.log
+
+# Clever Cloud
+.clever.json
+
+# OS / editor
+.DS_Store

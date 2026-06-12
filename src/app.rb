@@ -28,8 +28,13 @@ end
 # Transparent redirection to perdu.com website from /lost
 get '/lost' do
   response = HTTParty.get('https://perdu.com')
-  headers response.headers
+
+  # Forward only the status, content type and (already decoded) body. We do not
+  # copy the upstream Content-Length / Content-Encoding / Transfer-Encoding,
+  # since HTTParty has decoded the body and those would describe a payload that
+  # no longer matches — which the reverse proxy rejects with a 502.
   status response.code
+  content_type response.headers['content-type']
   body response.body
 end
 
