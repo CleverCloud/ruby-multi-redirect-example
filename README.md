@@ -1,5 +1,3 @@
-![Logo Clever Cloud](./clever-cloud-logo.png)
-
 # Ruby (Sinatra + Puma) redirections example on Clever Cloud
 [![Clever Cloud - PaaS](https://img.shields.io/badge/Clever%20Cloud-PaaS-orange)](https://clever-cloud.com)
 
